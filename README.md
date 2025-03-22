@@ -58,3 +58,104 @@ b = np.array([4, 7, 3], dtype=np.double)
 
 solution = gauss_seidel(A, b)
 print("Solution:", solution)
+
+
+
+
+```
+## Usage
+### Define the Coefficient Matrix 
+𝐴
+A and Vector 
+𝑏
+b: Ensure that 
+𝐴
+A is a square matrix (same number of rows and columns) and that the dimensions of 
+𝐴
+A and 
+𝑏
+b are compatible.
+
+Set Parameters: Adjust the tolerance and max_iterations parameters as needed. The tolerance determines the convergence criterion, while max_iterations sets a limit on the number of iterations to prevent infinite loops.
+
+Call the Function: Use the gauss_seidel function with your defined 
+𝐴
+A and 
+𝑏
+b to compute the solution.
+
+Handle Exceptions: Be prepared to handle exceptions in case the method does not converge within the specified number of iterations.
+
+Convergence Considerations
+The convergence of the Gauss-Seidel method depends on the properties of the coefficient matrix 
+𝐴
+A. The method is guaranteed to converge if 
+𝐴
+A is either:
+
+Diagonally Dominant: Each diagonal element 
+𝑎
+𝑖
+𝑖
+a 
+ii
+​
+  is greater than or equal to the sum of the absolute values of the other elements in the same row, i.e.,
+
+∣
+𝑎
+𝑖
+𝑖
+∣
+≥
+∑
+𝑗
+≠
+𝑖
+∣
+𝑎
+𝑖
+𝑗
+∣
+∣a 
+ii
+​
+ ∣≥ 
+j
+
+=i
+∑
+​
+ ∣a 
+ij
+​
+ ∣
+for all 
+𝑖
+i, with strict inequality for at least one row.
+
+Symmetric and Positive Definite: 
+𝐴
+A is equal to its transpose (
+𝐴
+=
+𝐴
+𝑇
+A=A 
+T
+ ) and all its eigenvalues are positive.
+
+If these conditions are not met, the method may still converge, but convergence is not guaranteed. It's essential to analyze the properties of 
+𝐴
+A before applying the Gauss-Seidel method.
+
+References
+For further reading and a deeper understanding of the Gauss-Seidel method, consider the following resources:
+
+- Gauss–Seidel Method - Wikipedia
+
+- Gauss-Seidel Method - Mathematics LibreTexts
+
+- Chapter 8: Gauss-Seidel Method | Introduction to Matrix Algebra
+
+These references provide comprehensive explanations, examples, and insights into the Gauss-Seidel method and its applications.
